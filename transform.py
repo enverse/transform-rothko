@@ -25,6 +25,7 @@ def half_pixel(path):
     # Save the modified image to a bytes buffer
     buffer = BytesIO()
     img.save(buffer, format='JPEG')
+    img.save("result.jpg")
 
     # Encode the contents of the buffer to a Base64 string
     img_base64 = base64.b64encode(buffer.getvalue()).decode()
